@@ -20,16 +20,9 @@ class ReportsController < ApplicationController
     if @report.save
       redirect_to @report, notice: "Report was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
-
-    private
-
-    def report_params
-      params.require(:report).permit(:location, :description, :photo, :status)
-    end
-
 
   # GET /reports/:id/edit
   def edit
@@ -42,7 +35,7 @@ class ReportsController < ApplicationController
     if @report.update(report_params)
       redirect_to @report, notice: "Report was successfully updated."
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -57,6 +50,6 @@ class ReportsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def report_params
-    params.require(:report).permit(:user_id, :location, :description, :photo, :status)
+    params.require(:report).permit(:email, :location, :description, :photo, :status)
   end
 end
