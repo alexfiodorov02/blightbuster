@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Report Details</h1>
+  <p><strong>Location:</strong> <%= @report.location %></p>
+  <p><strong>Description:</strong> <%= @report.description %></p>
+  <p><strong>Status:</strong> <%= @report.status %></p>
+  <p><strong>Photo:</strong> <%= image_tag @report.photo.url if @report.photo? %></p>
+  <%= link_to 'Edit', edit_report_path(@report), class: 'btn btn-warning' %>
+  <%= link_to 'Back', reports_path, class: 'btn btn-secondary' %>
+</div>

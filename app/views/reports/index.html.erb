@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Reported Issues</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reports.each do |report| %>
+        <tr>
+          <td><%= report.location %></td>
+          <td><%= report.description %></td>
+          <td><%= report.status %></td>
+          <td>
+            <%= link_to 'Show', report_path(report), class: 'btn btn-info' %>
+            <%= link_to 'Edit', edit_report_path(report), class: 'btn btn-warning' %>
+            <%= link_to 'Delete', report_path(report), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'New Report', new_report_path, class: 'btn btn-primary' %>
+</div>
