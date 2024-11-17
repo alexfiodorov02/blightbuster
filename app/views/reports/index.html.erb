@@ -18,7 +18,7 @@
           <td>
             <%= link_to 'Show', report_path(report), class: 'btn btn-info' %>
             <%= link_to 'Edit', edit_report_path(report), class: 'btn btn-warning' %>
-            <%= link_to 'Delete', report_path(report), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+            <%= button_to 'Delete', report_path(report), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
           </td>
         </tr>
       <% end %>
