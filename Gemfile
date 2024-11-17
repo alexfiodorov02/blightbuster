@@ -18,7 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # File uploads management
-gem 'carrierwave', '~> 2.2'
+gem 'carrierwave', '~> 3.0'
 gem 'mini_magick', '~> 4.9'
 
 # Use Redis adapter to run Action Cable in production
