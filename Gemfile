@@ -18,7 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # File uploads management
-gem 'mini_magick', '~> 4.9'
+gem 'mini_magick', '~> 5.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
