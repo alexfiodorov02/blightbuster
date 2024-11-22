@@ -1,102 +1,13 @@
 <div class="container">
+
   <h1>Welcome to BlightBuster</h1>
   <p>Your tool for reporting blight issues in Memphis.</p>
   <a href="<%= new_report_path %>" class="btn btn-primary">Report an Issue</a>
   <a href="<%= reports_path %>" class="btn btn-secondary">Track Status</a>
+  <link rel="stylesheet"href="styles.css">
+  <body>
+    <script src="backgroundShuffle.js"></script>
+  </body>
+
 </div>
 
-<style>
-    /* Basic reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Arial', sans-serif;
-        color: #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        position: relative; /* Required for positioning the pseudo-element */
-        overflow: hidden; /* Prevents scrolling caused by large background images */
-    }
-
-    /* Background with blur effect */
-    body::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url('https://www.agoda.com/wp-content/uploads/2024/03/Featured-image-Memphis-Tennessee-USA-Downtown-Skyline-1244x700.jpg'); /* Replace with your image URL */
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        filter: blur(8px); /* Apply blur effect only to the background */
-        z-index: -1; /* Keep the background behind the content */
-    }
-
-    .container {
-        text-align: center;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 40px;
-        max-width: 600px;
-        width: 100%;
-        min-width: 320px; /* Ensures there is always a minimum width */
-        margin: 0 15px; /* Adds some side margin for smaller screens */
-        z-index: 1; /* Keeps the content in front of the background */
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        color: #333; /* Dark text for good readability */
-        margin-bottom: 20px;
-        font-weight: bold;
-    }
-
-    p {
-        font-size: 1.1rem;
-        color: #666;
-        margin-bottom: 30px;
-    }
-
-    /* Button Styles */
-    .btn {
-        display: inline-block;
-        padding: 12px 20px;
-        font-size: 1.1rem;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 5px;
-        margin: 10px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .btn-primary {
-        background-color: #007bff;
-        color: #fff;
-    }
-
-    .btn-primary:hover {
-        background-color: #0056b3;
-        transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-        background-color: #6c757d;
-        color: #fff;
-    }
-
-    .btn-secondary:hover {
-        background-color: #5a6268;
-        transform: translateY(-2px);
-    }
-</style>
